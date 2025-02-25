@@ -1,4 +1,10 @@
-*{
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a363d9;
+}
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #6c5ce7, #a363d9);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     font-family: 'Arial', sans-serif;
 }
 
@@ -19,13 +25,58 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
+
     h1 {}
 
     .game-status {}
 
     .gameboard {
-        .cell {}
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        gap: 0px;
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #e0e0e0;
+            }
+        }
     }
 }
 
-.restart-button {}
+.restart-button {
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+    }
+    &:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 10px rgba(108, 92, 231, 0.3);
+    }
+}
+
+
+
