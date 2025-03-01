@@ -26,10 +26,12 @@ body {
     text-align: center;
 
     h1 {
-        padding-bottom: 2rem;
+        padding: 0;
     }
 
-    .game-status {}
+    .game-status {
+        padding: 10px 0 20px;
+    }
 
     .gameboard {
 
