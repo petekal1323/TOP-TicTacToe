@@ -27,14 +27,7 @@ const GameBoard = (function(){
     }
 
     return {setCell, getCell, reset, getBoard}
-
-    console.log(setCell);
-console.log(getCell);
-console.log(reset);
-console.log(getBoard);
 })();
-
-
 
 // -------------------------
 // Player Factory
